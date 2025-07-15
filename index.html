@@ -9,9 +9,87 @@
       href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../style.css" />
     <title>Tic Tac Toe Game</title>
   </head>
   <body>
+    <div class="container">
+      <h1>Tic Tac Toe Game</h1>
+
+      <button id="startGames" class="startGame">Start Game</button>
+
+      <div class="outerContainer" id="outerContainer">
+        <form class="formStyle" id="formStyle">
+          <input
+            type="text"
+            class="inputStyle"
+            id="playerOne"
+            placeholder="Enter Player 1 Name"
+            required
+          />
+          <input
+            type="text"
+            class="inputStyle"
+            id="playerTwo"
+            placeholder="Enter Player 2 Name"
+            required
+          />
+          <input
+            type="number"
+            class="inputStyle"
+            id="round"
+            placeholder="Enter Rounds"
+            min="1"
+            required
+          />
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="innerContainer" id="innerContainer">
+        <div id="roundInfo" class="turn"></div>
+        <div id="showUserName" class="turn"></div>
+        <audio
+          id="audio_cross"
+          class="audio"
+          controls
+          preload="auto"
+          src="../assets/audio/cross.mp3"
+        ></audio>
+        <audio
+          id="audio_circle"
+          class="audio"
+          controls
+          preload="auto"
+          src="../assets/audio/circle.mp3"
+        ></audio>
+        <div id="game">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+
+        <div class="winner" id="winner"></div>
+        <div class="winner" id="draw"></div>
+        <button class="reset" id="reset">Reset Round</button>
+        <audio
+          id="wow_audio"
+          class="audio"
+          controls
+          preload="auto"
+          src="../assets/audio/wow.mp3"
+        ></audio>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script type="module" defer src="./scripts/script.js"></script>
+    <script type="module" defer src="./scripts/game.js"></script>
   </body>
 </html>
